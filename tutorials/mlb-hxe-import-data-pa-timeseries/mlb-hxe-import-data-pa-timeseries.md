@@ -4,20 +4,15 @@ description: Import SAP Predictive Analytics Time Series Sample Datasets in your
 auto_validation: true
 primary_tag: products>sap-hana\, express-edition
 tags: [ tutorial>beginner, products>sap-hana\, express-edition, topic>machine-learning ]
+time: 10
 ---
 
 ## Prerequisites  
-- Proficiency: beginner
 - [Prepare your SAP HANA, express edition instance for Machine Learning](https://www.sap.com/developer/tutorials/mlb-hxe-setup-basic.html)
 
-### You will learn
-
-In this tutorial, you will learn how to download and import the SAP Predictive Analytics Time Series sample dataset into your SAP HANA, express edition instance.
-
 ## Details
-
-### Time to Complete
-**10 Min**.
+### You will learn
+In this tutorial, you will learn how to download and import the SAP Predictive Analytics Time Series sample dataset into your SAP HANA, express edition instance.
 
 [ACCORDION-BEGIN [Info: ](Sample file structure)]
 
@@ -78,7 +73,7 @@ Each observation is characterized by 2 variables described in the following tabl
 | `Signal`    | the signal value          | A numerical value
 
 [DONE]
-[ACCORDION-END] 
+[ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 1: ](Create the table structure)]
 
@@ -146,7 +141,7 @@ CREATE TABLE PA_DATA.TREND_AND_CYCLIC_AND_4WN (
 ```
 
 [DONE]
-[ACCORDION-END] 
+[ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Download the Sample Data)]
 
@@ -206,7 +201,7 @@ The dataset files should now be located in: **`/usr/sap/HXE/HDB90/work/sample_ti
 You can now move to **Step 3: Import Using the IMPORT FROM SQL command**.
 
 [DONE]
-[ACCORDION-END] 
+[ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 3: ](Import Using the SAP HANA Tools for Eclipse)]
 
@@ -235,7 +230,7 @@ The source files should be mapped with the following target tables:
 | `TrendAndCyclicAndWn.txt`     | `PA_DATA.TREND_AND_CYCLIC_AND_WN`
 
 [DONE]
-[ACCORDION-END] 
+[ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 3: ](Import Using the IMPORT FROM SQL command)]
 
@@ -312,7 +307,7 @@ WITH
 ```
 
 [DONE]
-[ACCORDION-END] 
+[ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 4: ](Verify the imported data)]
 
@@ -335,14 +330,12 @@ SELECT 'TREND_AND_CYCLIC_AND_WN'  as TABLE_NAME, count(1) as ROW_COUNT from PA_D
 ;
 ```
 
-It should return the following result:
-
 [DONE]
-[ACCORDION-END] 
+[ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 5: ](Validation)]
 
 Provide an answer to the question below then click on **Validate**.
 
 [VALIDATE_1]
-[ACCORDION-END] 
+[ACCORDION-END]

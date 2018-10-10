@@ -1,22 +1,20 @@
 ---
 title: Installing XS CLI Client
 description: Install the client package if you intend to develop XS applications on a machine that will not have a local SAP HANA 2.0, express edition installation. The clients let you access SAP HANA 2.0, express edition from your client machine.
+author_name: Adrian Plata
+author_profile: https://github.com/aplata-sap
 primary_tag: products>sap-hana\,-express-edition
 tags: [ tutorial>beginner, products>sap-hana\,-express-edition ]
+time: 10
 ---
 
 <!-- loioa0fb36b2aebf4b6fbda0564d5e8e58c5 -->
 
 ## Prerequisites
- - **Proficiency:** Beginner
- - **Tutorials:** You have completed [Start SAP HANA, express edition Server (VM installations)](http://www.sap.com/developer/tutorials/hxe-ua-getting-started-vm.html) or [Test the Installation (Native Linux installations)](http://www.sap.com/developer/tutorials/hxe-ua-test-binary.html)
 
 ## Details
 ### You will learn
-How to install the The XS advanced client-tools bundle.
-
-### Time to Complete
-10 min
+How to install the XS advanced client-tools bundle.
 
 ---
 
@@ -50,41 +48,42 @@ Install the Download Manager to your client machine and download the client pack
 
     -   For Linux, navigate to the directory in which you wish to extract the client files and use the tar command.
 
-    ```bash
-    cd <preferred_filepath>
-    sudo tar <download_filepath>/clients_<OS>.zip
-    ```
-
-    These files are extracted:
-
-    `clients_linux_x86_64.tgz`
-
-    -   `hdb_client_linux_x86_64.tgz`
-
-    -   `xs.onpremise.runtime.client_linuxx86_64.zip`
+        ```bash
+        cd <preferred_filepath>
+        sudo tar <download_filepath>/clients_<OS>.zip
+        ```
 
 
-    `clients_linux_ppc64.le.tgz`
+These files are extracted:
 
-    -   `hdb_client_linux_ppc64le.tgz`
+`clients_linux_x86_64.tgz`
 
-    -   `xs.onpremise.runtime.client_linuxx86_64.zip`
+-   `hdb_client_linux_x86_64.tgz`
 
-
-    `clients_windows.zip`
-
-    -   `hdb_client_windows_x86_32.tgz`
-
-    -   `hdb_client_windows_x86_64.tgz`
-
-    -   `xs.onpremise.runtime.client_ntamd64.zip`
+-   `xs.onpremise.runtime.client_linuxx86_64.zip`
 
 
-    `clients_mac.tgz`
+`clients_linux_ppc64.le.tgz`
 
-    -   `hdb_client_mac.tgz`
+-   `hdb_client_linux_ppc64le.tgz`
 
-    -   `xs.onpremise.runtime.client_darwinintel64.zip`
+-   `xs.onpremise.runtime.client_linuxx86_64.zip`
+
+
+`clients_windows.zip`
+
+-   `hdb_client_windows_x86_32.tgz`
+
+-   `hdb_client_windows_x86_64.tgz`
+
+-   `xs.onpremise.runtime.client_ntamd64.zip`
+
+
+`clients_mac.tgz`
+
+-   `hdb_client_mac.tgz`
+
+-   `xs.onpremise.runtime.client_darwinintel64.zip`
 
 
 [ACCORDION-END]

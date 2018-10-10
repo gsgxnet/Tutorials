@@ -4,10 +4,10 @@ description: Provide details on the installation the SAP HANA client and instruc
 auto_validation: true
 primary_tag: products>sap-hana\, express-edition
 tags: [ tutorial>how-to, tutorial>intermediate, products>sap-hana\, express-edition ]
+time: 10
 ---
-## Prerequisites  
-- Proficiency: intermediate
 
+## Details
 ### You will learn
 In this tutorial, you will install the SAP HANA client for SAP HANA, express edition.
 
@@ -18,11 +18,6 @@ The Linux `isql` tool is included in the unixODBC package. Please refer to your 
 On Windows environments, there is no pre-installed tool available out-of-the-box.
 
 For alternate options, you can also check the following link: [Select a SQL query tool for SAP HANA, express edition](https://www.sap.com/developer/tutorials/mlb-hxe-tools-sql.html).
-
-## Details
-
-### Time to Complete
-**10 Min**.
 
 [ACCORDION-BEGIN [Prerequisites: ](Download & Install the SAP HANA HDB client)]
 
@@ -261,8 +256,6 @@ There are several options available like:
  - `ODBC Test` by Microsoft:
 
     As part of the [Microsoft Data Access Components (MDAC) Software Development Kit](https://msdn.microsoft.com/en-us/library/ms810805.aspx) (which can be downloaded from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=21995)), this tool shows all the ODBC API function call and allow you to run SQL
-
- - [`FlySpeed SQL Query`](https://www.activedbsoft.com/download-querytool.html) free edition by `ActiveDBSoft`
 
  - [`ODBC QueryTool`](https://sourceforge.net/projects/odbcquerytool/) on `SourceForge`
 

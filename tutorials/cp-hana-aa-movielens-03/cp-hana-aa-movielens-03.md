@@ -4,17 +4,14 @@ description: Understand the capabilities and options made available with SAP HAN
 auto_validation: true
 primary_tag: topic>machine-learning
 tags: [  tutorial>beginner, products>sap-hana, products>sap-cloud-platform, topic>machine-learning ]
+time: 20
 ---
-
-## Prerequisites
- - **Proficiency:** Beginner
 
 ## Next Steps
 - [Leverage SAP HANA 1.0 Machine Learning capabilities to build a recommendation engine on the SAP Cloud Platform](https://www.sap.com/developer/groups/cp-hana-aa-movielens.html)
 
 ## Details
 ### You will learn
-
 - How to use SAP HANA APL Recommendation algorithm
 
 > ### **Note**
@@ -22,9 +19,6 @@ tags: [  tutorial>beginner, products>sap-hana, products>sap-cloud-platform, topi
 If you are using a different version of SAP HANA and the SAP HANA APL library, the code and the results may differ.
 >
 For more details about the APL function, check the online <a href="https://help.sap.com/viewer/cb31bd99d09747089754a0ba75067ed2/3.1/en-US/9bf31268c57e4c079f0cbabd36f39640.html" target="new">documentation</a>.
-
-### Time to Complete
-**20 Min**
 
 [ACCORDION-BEGIN [Info: ](SAP HANA Automated Predictive Library)]
 
@@ -588,7 +582,7 @@ Again, this model is for demonstration purpose and very specific to my initial p
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 7: ](Validate the content-base filtering results)]
+[ACCORDION-BEGIN [Step 7: ](Validate the content-based filtering results)]
 
 Let's verify how many movies will actually get recommendations using the following SQL:
 
@@ -601,20 +595,20 @@ FROM (
 ) GROUP BY "RECO_COUNT";
 ```
 
-Let's verify how many distinct movies will actually get recommended to a user (part of the top 5 scores) using the following SQL:
+Let's verify how many distinct similar movies will actually get recommended to a movie (part of the top 5 scores) using the following SQL:
 
 ```SQL
 SELECT
-    COUNT(1) AS "MOVIE_COUNT"
+    COUNT(1) AS "SIMILAR_MOVIEID"
   , COUNT(1) *100 / (SELECT COUNT(1) AS "COUNT" FROM "MOVIELENS"."public.aa.movielens.hdb::data.MOVIES" ) AS "MOVIE_RATIO"
 FROM (
-  SELECT "MOVIEID"
+  SELECT "SIMILAR_MOVIEID"
   FROM "MOVIELENS"."APL_RECO_MODEL_ITEMS_RESULTS"
-  GROUP BY "MOVIEID"
+  GROUP BY "SIMILAR_MOVIEID"
 );
 ```
 
-Only 1050 will receive the requested 5 recommendations out of the 1176 movies that will receive at least one recommendations.
+Only 1050 movies will receive the requested 5 recommendations out of the 1176 movies that will receive at least one recommendations.
 
 Let's verify how many rating does the movies with no recommendation have using the following SQL:
 

@@ -55,13 +55,13 @@ Above code is just a sample code that demonstrates how your call should look lik
 [ACCORDION-END]
 
 
-[ACCORDION-BEGIN [Step 2: ](Add Javascript and Vora Client Operator)]
+[ACCORDION-BEGIN [Step 2: ](Add JavaScript and Vora Client Operator)]
 
 As we don't have a `SAP Vora HdfsLoader Operator` equivalent for `GCS-Vora`, we would need to read the files from the GCS bucket and prepare SQL statements based on the file names and paths that can be provided to the **SAP Vora Client Operator**. The Vora Client then reads the files from the Google storage and attaches the file as a data source to the Vora table. From the previous step, we have the API call ready with us which we can use now in the JavaScript code.
 
 Open the pipeline which you have created in the previous tutorial `(test.myFirstPipeline)`, in the modelling environment (`https://vhcalruntime/app/pipeline-modeler`)
 
->As the above URL is a local URL, it will be accessible only if you are doing the tutorials and have already configured the hosts file. If not, please refer to [Getting Started with SAP Data Hub, trial edition](https://caldocs.hana.ondemand.com/caldocs/help/Getting_Started_Data_Hub.pdf) guide.
+>As the above URL is a local URL, it will be accessible only if you are doing the tutorials and have already configured the hosts file. If not, please refer to [Getting Started with SAP Data Hub, trial edition](https://caldocs.hana.ondemand.com/caldocs/help/Getting_Started_Data_Hub_SP04.pdf) guide.
 
 Add a **JavaScript Operator** to the pipeline by drag & drop. Also add a **SAP Vora Client** operator similarly. Then connect the `outFilename` port of the **GCS Consumer** (this is an unused port in the GCS Consumer operator) to the `input` port of the **JavaScript Operator**. Also connect the `output` port of the **JavaScript Operator** to the `inSQL` port of the **SAP Vora Client Operator**
 
@@ -138,7 +138,7 @@ Now we would be configuring the second operator that we have added - **SAP Vora 
 |  Field Name     | Value
 |  :------------- | :-------------
 |  `dsn`  | `v2://vora-tx-coordinator:10002/?binary=true`
-|  user  | Username for the application. Default is - `default/datahub`
+|  user  | Username for the application. Default is - `default\datahub`
 |  password  | Your password for the above username
 
 Keep all the other properties as is and **Save** the graph.
@@ -166,7 +166,7 @@ Longer the pipeline runs, more files are generated. Therefore, after a while sto
 
 Open [http://console.cloud.google.com](http://console.cloud.google.com) and navigate to the `/sensordata/` directory. You can notice that the output files are generated similar to the earlier tutorial.
 
-Now login to the **SAP Data Hub Cockpit** using the link [https://vhcalhxedb:51076/](https://vhcalhxedb:51076/) and click on the link **VORA Tools** found under the section - **Quick Links** > **Featured Links**
+Now login to the **SAP Data Hub Cockpit** using the link (`https://vhcalhxedb:51076/`) and click on the link **VORA Tools** found under the section - **Quick Links** > **Featured Links**
 
 ![picture3](datahub-trial-pipelines-part05-3.png)
 

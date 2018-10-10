@@ -28,7 +28,7 @@ Please note that this tutorial is similar to the `Bundle data (via JavaScript)` 
 
 Open the pipeline which you have created in the previous tutorial `(test.myFirstPipeline)`, in the modelling environment (`https://vhcalruntime/app/pipeline-modeler`)
 
->As the above URL is a local URL, it will be accessible only if you are doing the tutorials and have already configured the hosts file. If not, please refer to [Getting Started with SAP Data Hub, trial edition](https://caldocs.hana.ondemand.com/caldocs/help/Getting_Started_Data_Hub.pdf) guide.
+>As the above URL is a local URL, it will be accessible only if you are doing the tutorials and have already configured the hosts file. If not, please refer to [Getting Started with SAP Data Hub, trial edition](https://caldocs.hana.ondemand.com/caldocs/help/Getting_Started_Data_Hub_SP04.pdf) guide.
 
 Remove the connection between the **Kafka Consumer 2** operator and the **GCS Producer** operator.
 
@@ -110,5 +110,3 @@ You can open any of the generated file by clicking on the filename which opens i
 
 ---
 
-## Next Steps
-- [Store sensor data in SAP Vora](https://www.sap.com/developer/tutorials/datahub-trial-pipelines-part05.html)
